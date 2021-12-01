@@ -5,30 +5,26 @@ using TMPro;
 
 public class SpeedDisplayer : MonoBehaviour
 {
+    public PlayerSpeedTunnel playerSpeedTunnel;
     private TextMeshProUGUI textMeshPro;
-    private new Rigidbody2D rigidbody2D;
     public float playerSpeed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        var player = GameObject.FindWithTag("Player");
-        rigidbody2D = player.GetComponent<Rigidbody2D>();
         textMeshPro = GetComponent<TextMeshProUGUI>();
-        
     }
-
-    private void DisplaySpeed(float playerSpeed)
+    private void OnEnable()
+    {
+        playerSpeedTunnel.speedDisplayer = this;
+    }
+    public void UpdateText(float playerSpeed)
     {
         textMeshPro.text = playerSpeed.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-
-        DisplaySpeed(rigidbody2D.velocity.magnitude);
-        // la magnitude c'est la taille du vecteur de la vélocité 
-       
+        playerSpeedTunnel.speedDisplayer = null;
     }
 }

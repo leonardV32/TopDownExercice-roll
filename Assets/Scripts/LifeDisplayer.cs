@@ -6,14 +6,8 @@ public class LifeDisplayer : MonoBehaviour
 {
     public GameObject heart;
 
-    private HealthBehaviour playerHealth;
     // Start is called before the first frame update
-    void Start()
-    {
-        var player = GameObject.FindWithTag("Player");
-        playerHealth = player.GetComponent<HealthBehaviour>();
-    }
-
+   
     // Update is called once per frame
     public void UpdateHearts(int heartNumber) // permet d'itérer sur les éléments du tableau
     {
@@ -26,11 +20,5 @@ public class LifeDisplayer : MonoBehaviour
         {
             Instantiate(heart, Vector3.zero, Quaternion.identity, transform);
         }
-    }
-
-    //On a donc une boucle de destruction et instanciation à chaque appel de la fonction.
-    private void Update()
-    {
-        UpdateHearts(playerHealth.currentHealth);
     }
 }

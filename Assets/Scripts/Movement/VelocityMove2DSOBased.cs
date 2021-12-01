@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class VelocityMove2DSOBased : Mover2D // même comportement que velocitymove2D
 {
-    public float speed; // remplacer par un paramètre SO ennemi move
-
+     // remplacer par un paramètre SO ennemi move
+    public MovementSO movement;
     public override void Move(Vector2 direction)
     {
-        rigidbody2D.velocity = direction.normalized * speed;
+        rigidbody2D.velocity = direction.normalized * movement.enemyspeed;
     }
 }
 

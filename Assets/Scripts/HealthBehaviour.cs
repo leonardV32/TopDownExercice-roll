@@ -13,20 +13,16 @@ public class HealthBehaviour : MonoBehaviour
     private void Start()
     {
         currentHealth = startHealth;
+        healthChanged.Invoke(currentHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        TestEvent();
+        playerDamaged.Invoke();
         ModifyHealth(-damage);
         
     }
 
-    private void TestEvent()
-    {
-        Debug.Log("Ca marche");
-        playerDamaged.Invoke();
-    }
     public void Heal(int health)
     {
         ModifyHealth(health);

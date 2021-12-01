@@ -13,6 +13,8 @@ public class PlayerBehaviour : MonoBehaviour
     private Vector2 direction;
     private Vector2 lastFacingDirection;
 
+    public PlayerSpeedTunnel playerSpeedTunnel;
+
     private void Awake()
     {
         move = GetComponent<AddForceMove2D>();
@@ -51,5 +53,6 @@ public class PlayerBehaviour : MonoBehaviour
     private void Update()
     {
        animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
+       playerSpeedTunnel.DisplaySpeed(rigidbody2D.velocity.magnitude);
     }
 }
