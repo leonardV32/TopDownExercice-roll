@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5525209483821245440}
   - component: {fileID: 5525209483821245441}
   - component: {fileID: 5525209483821245442}
+  - component: {fileID: 592703116}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -147,6 +148,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405f2033ea8a6534a9f527e796425305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeedTunnel: {fileID: 0}
-  playerSpeed: 0
-  player: {fileID: 0}
+--- !u!114 &592703116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525209483821245444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558de48e6af0f3648a4f1fe605ee1132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a7c0abf88653139478d71233a56d438c, type: 2}
+  gameEventCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5525209483821245442}
+        m_TargetAssemblyTypeName: SpeedDisplayer, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

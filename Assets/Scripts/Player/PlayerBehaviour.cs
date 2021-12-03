@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
     private Vector2 direction;
     private Vector2 lastFacingDirection;
 
-    public PlayerSpeedTunnel playerSpeedTunnel;
+    public float playerSpeed;
+    public UnityEvent<float> speedDisplayed;
 
     private void Awake()
     {
@@ -53,6 +55,11 @@ public class PlayerBehaviour : MonoBehaviour
     private void Update()
     {
        animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
-       playerSpeedTunnel.DisplaySpeed(rigidbody2D.velocity.magnitude);
+        DisplaySpeed(playerSpeed);
+    }
+
+    public void DisplaySpeed(float playerSpeed)
+    {
+        playerSpeed = rigidbody2D.velocity.magnitude;
     }
 }
