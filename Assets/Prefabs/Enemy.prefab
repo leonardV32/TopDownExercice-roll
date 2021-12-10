@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7480215165192360564}
   - component: {fileID: 4616827497548496539}
   - component: {fileID: -3228374890406798838}
+  - component: {fileID: -3797486651126110325}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -218,4 +219,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06aafff165a41e4996218c3653ab5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 11400000, guid: 883796006f5c68041b278fb51d0ed6b3, type: 2}
+  speedChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-3797486651126110325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656827130424974269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558de48e6af0f3648a4f1fe605ee1132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a7c0abf88653139478d71233a56d438c, type: 2}
+  gameEventCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -3228374890406798838}
+        m_TargetAssemblyTypeName: VelocityMove2DSOBased, Assembly-CSharp
+        m_MethodName: SetSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

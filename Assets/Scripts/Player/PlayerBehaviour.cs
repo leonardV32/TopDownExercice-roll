@@ -55,7 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Update()
     {
        animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
-        DisplaySpeed(playerSpeed);
+       DisplaySpeed(playerSpeed);
     }
 
     public void DisplaySpeed(float playerSpeed)

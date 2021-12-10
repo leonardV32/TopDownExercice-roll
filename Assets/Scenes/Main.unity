@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251764041}
   - component: {fileID: 251764040}
+  - component: {fileID: 251764042}
   m_Layer: 0
   m_Name: ScreenShaker
   m_TagString: Untagged
@@ -196,6 +197,34 @@ Transform:
   m_Father: {fileID: 2069318718}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251764042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251764039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32cb33f407f1f574d8096897b4d3bfc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b57977d49a73d09448709211e43148b3, type: 2}
+  gameEventCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 251764040}
+        m_TargetAssemblyTypeName: Cinemachine.CinemachineImpulseSource, Cinemachine
+        m_MethodName: GenerateImpulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &278164177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,10 +280,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: playerDamaged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 251764040}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
 --- !u!1 &313621350
@@ -11535,26 +11560,6 @@ PrefabInstance:
     - target: {fileID: 8602617427946136108, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8602617427946136109, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8602617427946136109, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 883796006f5c68041b278fb51d0ed6b3, type: 2}
-    - target: {fileID: 8602617427946136109, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSpeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8602617427946136109, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MovementSO, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8602617427946136109, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f4460172dada34d9215678ea7fd781, type: 3}
